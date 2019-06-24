@@ -1,0 +1,17 @@
+<tr class="activity_entry">
+  <td><input class="visible_field" type="checkbox" checked /></td>
+  <td><input class="name_field" type="text" /></td>
+  <td><input class="duration_field" type="text" /></td>
+  <td><input class="participants_field" type="text" /></td>
+  <td><input class="instructions_field" type="text" /></td>
+  <td><input class="answers_field" type="text" /></td>
+  <td>
+    <div class="links_list">
+      {{#each links}}
+      {{> link_entry}}
+      {{/each}}
+    </div>
+    <button class="add_link">+</button>
+  </td>
+  <td><button class="remove_activity">X</button></td>
+</tr>

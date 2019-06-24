@@ -1,0 +1,20 @@
+{
+  "name": "generador-paginas-sqt",
+  "version": "1.0.0",
+  "description": "Generador de páginas de entrenamiento SQT",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html generar.html --open",
+    "build": "parcel build index.html generar.html"
+  },
+  "dependencies": {
+    "handlebars": "4.1.2",
+    "jquery": "3.4.1",
+    "parcel-plugin-handlebars": "0.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}

@@ -1,2 +1,0 @@
-# Generador
-Created with CodeSandbox

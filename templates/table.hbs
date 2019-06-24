@@ -1,0 +1,43 @@
+<table>
+  <th>
+    Actividades
+  </th>
+  <th>
+    Tiempo y participante
+  </th>
+  <th>
+    Instrucciones
+  </th>
+  <th>
+    Hoja de respuestas
+  </th>
+  <th>
+    Material
+  </th>
+  {{#each activities}}
+  {{#if visible}}
+  <tr>
+    <td>
+      {{name}}
+    </td>
+    <td>
+      {{duration}}
+      {{participants}}
+    </td>
+    <td>
+      {{instructions}}
+    </td>
+    <td>
+      {{answers}}
+    </td>
+    <td>
+      <ul>
+        {{#each links as |link|}}
+        <li>{{link}}</li>
+        {{/each}}
+      </ul>
+    </td>
+  </tr>
+  {{/if}}
+  {{/each}}
+</table>

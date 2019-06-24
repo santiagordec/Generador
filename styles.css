@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+}
+
+#activities_list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#result {
+  display: flex;
+}
+
+#result div {
+  flex: 1;
+}
+
+.link_entry {
+  display: flex;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #b9b9b9;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #b9b9b9;
+}
+
+textarea {
+  width: 100%;
+  height: 400px;
+}
