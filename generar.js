@@ -60,6 +60,18 @@ function loadPage() {
   $("#done").click(loadResult);
 }
 
+var iconChanger = 0;
+
+function iconMover() {
+  // const table = Handlebars.compile(table);
+  $("#linkIcon").attr("src", "1.png");
+  console.log("Inside iconMover");
+  iconChanger = iconChanger + 1;
+  if (iconChanger === 3) {
+    iconChanger = 0;
+  }
+}
+
 function loadResult() {
   const data = {
     activities: []
@@ -69,9 +81,16 @@ function loadResult() {
     new_activity.visible = $(this)
       .find(".visible_field")
       .prop("checked");
+    new_activity.title = $(this)
+      .find(".title_field")
+      .val();
+    new_activity.titleID = new_activity.title;
+    console.log(new_activity.titleID);
     new_activity.name = $(this)
       .find(".name_field")
       .val();
+    new_activity.nameID = new_activity.titleID + new_activity.name;
+    console.log(new_activity.nameID);
     new_activity.duration = $(this)
       .find(".duration_field")
       .val();
@@ -81,16 +100,25 @@ function loadResult() {
     new_activity.instructions = $(this)
       .find(".instructions_field")
       .val();
+    new_activity.instructionsID = new_activity.nameID + "_instrucciones";
+    console.log(new_activity.instructionsID);
     new_activity.answers = $(this)
       .find(".answers_field")
       .val();
+    new_activity.answerSheetID = new_activity.nameID + "_answerSheet";
+    console.log(new_activity.answerSheetID);
     new_activity.links = [];
     $(this)
       .find(".link_entry")
-      .each(function() {
+      .each(function(index) {
         const link = $(this)
           .find(".link_field")
           .val();
+        new_activity.linkID = new_activity.nameID + "link" + index;
+        console.log(new_activity.linkID);
+        iconMover();
+        console.log(iconChanger);
+
         new_activity.links.push(link);
       });
     data.activities.push(new_activity);
@@ -104,4 +132,5 @@ function loadResult() {
   const template = Handlebars.compile(result);
   const html = template(data);
   $("#result").html(html);
+  // $("#trainingTitle").html("Generar página de entrenamiento" + new_activity.titleID);
 }

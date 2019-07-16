@@ -15,7 +15,9 @@ body {
 #result div {
   flex: 1;
 }
-
+h1 {
+  color: rgb(18, 95, 34);
+}
 .link_entry {
   display: flex;
 }

@@ -21,19 +21,21 @@
       {{name}}
     </td>
     <td>
-      {{duration}}
-      {{participants}}
+      <img src="img/tiempo.png"> {{duration}} <br>
+      <img src="img/participantes.png"> {{participants}}
     </td>
     <td>
-      {{instructions}}
+      <a href="{{instructions}}" id="{{title}}|{{name}}|Instrucciones" onClick="myFunction(this)">
+        <img src="img/instrucciones.png"></a>
     </td>
     <td>
-      {{answers}}
-    </td>
+      <a href="{{answers}}" id=" {{title}}|{{name}}|Respuestas" onClick="myFunction(this)">
+        <img src=" img/instrucciones.png"> </a> </td>
     <td>
       <ul>
         {{#each links as |link|}}
-        <li>{{link}}</li>
+        <a href="{{link}}" id=" {{title}}|{{name}}|{{link}}" onClick="myFunction(this)">
+          <img id="linkIcon" src="img/0.png"></a>
         {{/each}}
       </ul>
     </td>
@@ -41,3 +43,9 @@
   {{/if}}
   {{/each}}
 </table>
+
+<script>
+  function myFunction(received) {
+    alert(received.id);
+  }
+</script>
