@@ -15,6 +15,16 @@ body {
 #result div {
   flex: 1;
 }
+
+.participants {
+  text-align: left;
+}
+
+.participants img {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 h1 {
   color: rgb(18, 95, 34);
 }
@@ -27,15 +37,37 @@ table {
   width: 100%;
 }
 
-td,
+td {
+  border: 1px solid #44444;
+  text-align: center;
+  padding: 8px;
+}
+
 th {
-  border: 1px solid #b9b9b9;
+  border: 1px solid #e8e8e8;
+  text-align: left;
+  padding: 8px;
+  background-color: #92a2bd;
+  color: white;
+}
+
+thead {
+  background-color: #444444;
+  border: 1px solid #44444;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #b9b9b9;
+  background-color: #e8e8e8;
+}
+
+img {
+  max-height: 25px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f7f7f7;
 }
 
 textarea {
